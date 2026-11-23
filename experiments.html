@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Experiments</title>
+  <script src="theme.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Experiments</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="about.html">About</a> |
+      <a href="experiments.html">Experiments</a> |
+      <a href="form-no-js.html">Contact Form</a> |
+      <a href="form-with-js.html">JS Form</a>
+      <button type="button" id="theme-toggle" hidden>Dark Mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>video tag</h2>
+      <video controls width="200">
+        <source src="https://cdn.pixabay.com/video/2025/05/27/282086.mp4?download" type="video/mp4">
+      </video>
+    </section>
+
+    <section>
+      <h2>audio tag</h2>
+      <audio controls src="https://cdn.pixabay.com/download/audio/2026/04/13/audio_9bee257339.mp3?filename=alexzavesa-calm-inspiring-piano-logo-short-version-518990.mp3"></audio>
+    </section>
+
+    <section>
+      <h2>canvas tag</h2>
+      <canvas id="myCanvas" width="100" height="50"></canvas>
+      <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillRect(0, 0, 100, 50);
+      </script>
+    </section>
+
+    <section>
+      <h2>template tag</h2>
+      <template id="myTemp">
+        <p>this is inside the template</p>
+      </template>
+      <p>the template tag above is hidden from view</p>
+    </section>
+</main>
+</body>
+</html>
+

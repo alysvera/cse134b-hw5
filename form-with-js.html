@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with JS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="form.js" defer></script>
+    <script src="theme.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="projects.html">Projects</a> |
+            <a href="about.html">About</a> |
+            <a href="experiments.html">Experiments</a> |
+            <a href="form-no-js.html">No JS Form</a> |
+            <a href="form-with-js.html">JS Form</a>
+            <button type="button" id="theme-toggle" hidden>Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>send me a message!</h2>
+            <p>fill out the form below to contact me.</p>
+            <p>
+                all fields are required. your name can be
+                1-100 characters and your message must be
+                10-1000 characters long.
+            </p>
+
+            <form action="https://httpbin.org/post" method="post">
+                <fieldset>
+                    <legend>contact form</legend>
+
+                    <!-- name field -->
+                    <label for="name">name (required):</label>
+                    <input type="text" id="name" name="name"
+                           autocomplete="name"
+                           required minlength="1" maxlength="100"
+                           aria-describedby="name-error">
+
+                    <!-- email field -->
+                    <label for="email">email (required):</label>
+                    <input type="email" id="email" name="email"
+                           autocomplete="email"
+                           required
+                           aria-describedby="email-error">
+
+                    <!-- comments field -->
+                    <label for="comments">comments (required):</label>
+                    <textarea id="comments" name="comments"
+                              required minlength="10" maxlength="1000"
+                              aria-describedby="comments-error character-count"></textarea>
+
+                    <!-- hidden fields -->
+                    <input type="hidden" name="possible_bot" value="true">
+
+                    <input type="hidden" id="form-errors"
+                           name="form-errors" value="[]">
+
+                    <!-- error messages -->
+                    <div id="error-area" aria-live="polite" hidden>
+                        <h3>form errors</h3>
+                        <p id="name-error"></p>
+                        <p id="email-error"></p>
+                        <p id="comments-error"></p>
+                    </div>
+
+                    <!-- character counter -->
+                    <div id="info-area" hidden>
+                        <h3>message info</h3>
+                        <p id="character-count"></p>
+                    </div>
+
+                    <button type="submit">send message</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 alyssa rivera</p>
+    </footer>
+</body>
+</html>

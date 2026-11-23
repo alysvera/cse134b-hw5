@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="projects.html">Projects</a> |
+            <a href="about.html">About</a> |
+            <a href="experiments.html">Experiments</a> |
+            <a href="form-no-js.html">Contact Form</a> |
+            <a href="form-with-js.html">JS Form</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>send me a message!</h2>
+            <p>fill out the form below to contact me.</p>
+            <p>all fields are required. your name can be
+               1-100 characters and your message must be
+               10-1000 characters long.</p>
+
+            <form action="https://httpbin.org/post" method="post">
+                <fieldset>
+                    <legend>contact form</legend>
+
+                    <label for="name">name (required):</label>
+                    <input type="text" id="name" name="name"
+                           autocomplete="name" required
+                           minlength="1" maxlength="100">
+
+                    <label for="email">email (required):</label>
+                    <input type="email" id="email" name="email"
+                           autocomplete="email" required>
+
+                    <label for="comments">comments (required):</label>
+                    <textarea id="comments" name="comments"
+                              required minlength="10"
+                              maxlength="1000"></textarea>
+
+                    <input type="hidden" name="possible_bot"
+                           value="true">
+
+                    <button type="submit">send message</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 alyssa rivera</p>
+    </footer>
+</body>
+</html>
