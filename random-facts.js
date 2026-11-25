@@ -13,7 +13,7 @@ class RandomFacts extends HTMLElement {
         },
         {
           fact: "My hobbies include playing tennis, video games, and finding a good matcha.",
-          details: "I've been playing tennis since I was young, and it has always been one of my favorite ways to stay active. I also enjoy playing video games, especially Minecraft and The Sims, because I love the creativity they allow. Another hobby of mine is exploring different cafes and trying their matcha. Some of my favorite matcha spots in San Diego are Hinae and Labora."
+          details: "I've been playing tennis since I was young, and it has always been one of my favorite ways to stay active. I also enjoy playing video games, especially Minecraft and The Sims, because I love the creativity they allow. Another hobby of mine is exploring different cafes and trying their matcha. Some of my favorite matcha spots in San Diego are Hinar and Labora."
         },
         {
           fact: "I currently work at Sephora.",
