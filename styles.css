@@ -356,3 +356,59 @@ form textarea:user-valid {
         animation-duration: 0.01ms;
     }
 }
+
+
+
+/* homework 5 - web component theme */
+
+random-facts {
+  --facts-background: var(--color-bubble-pink, #fbe6f2);
+  --facts-text: var(--color-text, #374151);
+  --facts-accent: var(--color-green, #507957);
+
+  display: block;
+  background-color: var(--facts-background, #fbe6f2);
+  color: var(--facts-text, #374151);
+}
+
+/* component headings */
+random-facts h3 {
+  color: var(--facts-text, #374151);
+}
+
+/* component paragraphs */
+random-facts p {
+  color: var(--facts-text, #374151);
+}
+
+/* component buttons */
+random-facts button {
+  background-color: #b94c83;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5em 1.25em;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* dark mode buttons */
+[data-theme="dark"] random-facts button {
+  background-color: var(--color-pink, #f3a6d0);
+  color: #1e1e24;
+}
+
+/* keyboard focus */
+random-facts button:focus-visible,
+#toggle-details:focus-visible {
+  outline: 3px solid var(--facts-accent, #507957);
+  outline-offset: 3px;
+}
+
+/* disabled button while loading */
+random-facts button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

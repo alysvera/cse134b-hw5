@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="icon" href="data:,">
+  <script src="theme.js" defer></script>
+  <script>
+    // placeholder script for analytics requirement
+  </script>
+
+  <!-- custom element 2 -->
+  <script>
+    class HelloWorld extends HTMLElement {
+      connectedCallback() {
+        console.log("Hello World!");
+      }
+    }
+    customElements.define('hello-world', HelloWorld);
+  </script>
+</head>
+<body>
+  <!-- custom element instantiation -->
+  <hello-world></hello-world>
+
+  <header>
+    <h1>Alyssa Rivera</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="about.html">About</a> |
+      <a href="experiments.html">Experiments</a> |
+      <a href="form-no-js.html">Contact Form</a> |
+      <a href="form-with-js.html">JS Form</a>
+      <button type="button" id="theme-toggle" hidden>Dark Mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>Hello! Welcome to my site. I am testing <b>bold</b>, <i>italic</i>, <strong>strong</strong>, and <em>em</em> tags here.</p>
+      <div>
+        <span>Some simple text in a span.</span>
+      </div>
+      <br>
+      <noscript>
+        <p>javascript is currently turned off</p>
+      </noscript>
+    </section>
+
+    <section>
+      <h2>Custom element test</h2>
+      <my-card>
+        <p>This is my custom card element</p>
+      </my-card>
+    </section>
+  </main>
+
+  
+{% include "footer.njk" %}
+
+</body>
+</html>
